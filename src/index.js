@@ -6,10 +6,10 @@ import dva from 'dva'
 import createLoading from 'dva-loading'
 
 const app = dva({
-    history: createHistory(),
-    onError: (error) => {
-        error.preventDefault()
-    }
+  history: createHistory(),
+  onError: error => {
+    error.preventDefault()
+  },
 })
 
 app.use(createLoading())

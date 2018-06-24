@@ -1,5 +1,5 @@
 export default {
-    namespace: 'main',
-    state: '',
-    reducers: {},
+  namespace: 'main',
+  state: '',
+  reducers: {},
 }
