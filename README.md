@@ -32,9 +32,6 @@ exx_cra/
         util.js
     App.css
     App.js
-    App.test.js
-    index.css
-    index.js
     logo.svg
 ```
 
