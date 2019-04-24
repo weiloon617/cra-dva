@@ -1,7 +1,7 @@
 # DVA + create-react-app
 Using DVA in Create-React-App.
 
-## Folder Structure EXX CRA
+## Folder Structure
 
 After creation, your project should look like this:
 
