@@ -8,6 +8,8 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "merge": "^1.2.1",
     "react": "^16.4.0",
     "react-dev-utils": "^7.0.3",
