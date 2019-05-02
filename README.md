@@ -7,7 +7,7 @@ Using DVA in Create-React-App.
 After creation, your project should look like this:
 
 ```
-exx_cra/
+cra-dva/
   README.md
   node_modules/
   package.json
