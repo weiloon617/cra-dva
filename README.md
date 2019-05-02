@@ -1,4 +1,5 @@
 # DVA + create-react-app
+
 Using DVA in Create-React-App.
 
 ## Folder Structure
@@ -21,7 +22,7 @@ exx_cra/
         menu.js
     componnets/
         layout/
-    models/ 
+    models/
         main.js
     routes/
         Main/

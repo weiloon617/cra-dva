@@ -1,10 +1,10 @@
-import '@babel/polyfill'
-import 'url-polyfill'
 import createHistory from 'history/createBrowserHistory'
 
+// Dva
 import dva from 'dva'
 import createLoading from 'dva-loading'
 
+// create app
 const app = dva({
   history: createHistory(),
   onError: error => {
@@ -12,10 +12,13 @@ const app = dva({
   },
 })
 
+// loading
 app.use(createLoading())
 
-app.model(require('./models/main').default)
+// models used by app
+// app.model(require('./models/main').default)
 
+// route in app
 app.router(require('./router').default)
 
 app.start('#root')

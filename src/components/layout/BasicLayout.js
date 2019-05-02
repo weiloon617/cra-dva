@@ -5,10 +5,7 @@ import { connect } from 'dva'
 import { getRoutes } from '../../utils/util'
 import Main from '../../routes/Main/'
 
-@connect(({ main }) => ({
-  main,
-}))
-export default class BasicLayout extends PureComponent {
+class BasicLayout extends PureComponent {
   render() {
     const { routerData, match, location } = this.props
     const isLandingPage = match.path === location.pathname
@@ -29,3 +26,7 @@ export default class BasicLayout extends PureComponent {
     )
   }
 }
+
+export default connect(({ main }) => ({
+  main,
+}))(BasicLayout)
