@@ -1,8 +1,10 @@
-import createHistory from 'history/createBrowserHistory'
+// import createHistory from 'history/createBrowserHistory'
 
 // Dva
 import dva from 'dva'
 import createLoading from 'dva-loading'
+
+const createHistory = require('history').createBrowserHistory
 
 // create app
 const app = dva({
@@ -16,7 +18,7 @@ const app = dva({
 app.use(createLoading())
 
 // models used by app
-// app.model(require('./models/main').default)
+app.model(require('./models/main').default)
 
 // route in app
 app.router(require('./router').default)
