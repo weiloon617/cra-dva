@@ -2,7 +2,13 @@ import React, { PureComponent } from 'react'
 import { Switch, Route } from 'dva/router'
 import { connect } from 'dva'
 
+// Component
+import NavBar from '../navbar'
+
+// Utils
 import { getRoutes } from '../../utils/util'
+
+// Routes
 import Main from '../../routes/Main/'
 
 class BasicLayout extends PureComponent {
@@ -11,6 +17,7 @@ class BasicLayout extends PureComponent {
     const isLandingPage = match.path === location.pathname
     return (
       <div>
+        <NavBar />
         {isLandingPage && <Main />}
         <Switch>
           {getRoutes(match.path, routerData).map(item => (
