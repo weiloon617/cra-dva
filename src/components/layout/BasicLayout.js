@@ -10,6 +10,9 @@ import { getRoutes } from '../../utils/util'
 // Route
 import Main from '../../routes/Main'
 
+// Component
+import NavBar from '../navbar'
+
 const BasicLayout = ({ routerData, match, location }) => {
   let isMainPage = null
 
@@ -22,6 +25,7 @@ const BasicLayout = ({ routerData, match, location }) => {
   return (
     <DocumentTitle title={currentRouteData.title}>
       <div>
+        <NavBar />
         {isMainPage}
         <Switch>
           {getRoutes(match.path, routerData).map(item => (

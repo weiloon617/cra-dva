@@ -1,8 +1,9 @@
-// import createHistory from 'history/createBrowserHistory'
-
 // Dva
 import dva from 'dva'
 import createLoading from 'dva-loading'
+
+// Styling
+import './App.css'
 
 const createHistory = require('history').createBrowserHistory
 
