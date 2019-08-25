@@ -1,18 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
+
+// Dva
 import { connect } from 'dva'
-import DocumentTitle from 'react-document-title'
 
 // Styling
 import './index.less'
 
-class Main extends Component {
-  render() {
-    return (
-      <DocumentTitle title="CRA DVA">
-        <div className="main-wrapper">Main</div>
-      </DocumentTitle>
-    )
-  }
+const Main = ({ main }) => {
+  return <div className="main-wrapper">{main.title}</div>
 }
 
 export default connect(({ main }) => ({

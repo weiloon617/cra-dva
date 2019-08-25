@@ -1,12 +1,7 @@
-import React, { Component } from 'react'
-import DocumentTitle from 'react-document-title'
+import React from 'react'
 
-export default class Main extends Component {
-  render() {
-    return (
-      <DocumentTitle title="Sign Up">
-        <div>Sign Up</div>
-      </DocumentTitle>
-    )
-  }
+const SignUp = () => {
+  return <div>Sign Up</div>
 }
+
+export default SignUp

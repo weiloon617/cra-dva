@@ -1,17 +1,28 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
+import DocumentTitle from 'react-document-title'
+
+// Dva
 import { Switch, Route } from 'dva/router'
-import { connect } from 'dva'
 
+// Utils
 import { getRoutes } from '../../utils/util'
-import Main from '../../routes/Main/'
 
-class BasicLayout extends PureComponent {
-  render() {
-    const { routerData, match, location } = this.props
-    const isLandingPage = match.path === location.pathname
-    return (
+// Route
+import Main from '../../routes/Main'
+
+const BasicLayout = ({ routerData, match, location }) => {
+  let isMainPage = null
+
+  if (match.path === location.pathname) {
+    isMainPage = <Main />
+  }
+
+  let currentRouteData = routerData[location.pathname]
+
+  return (
+    <DocumentTitle title={currentRouteData.title}>
       <div>
-        {isLandingPage && <Main />}
+        {isMainPage}
         <Switch>
           {getRoutes(match.path, routerData).map(item => (
             <Route
@@ -23,10 +34,8 @@ class BasicLayout extends PureComponent {
           ))}
         </Switch>
       </div>
-    )
-  }
+    </DocumentTitle>
+  )
 }
 
-export default connect(({ main }) => ({
-  main,
-}))(BasicLayout)
+export default BasicLayout
